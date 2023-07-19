@@ -8,9 +8,7 @@
         "project": ["tsconfig.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
       },
-      "extends": [
-        "plugin:@angular-eslint/recommended"
-      ],
+      "extends": ["plugin:@angular-eslint/recommended"],
       "rules": {
         "@angular-eslint/component-selector": [
           "error",
