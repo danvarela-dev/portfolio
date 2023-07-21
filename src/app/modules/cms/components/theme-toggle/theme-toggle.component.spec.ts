@@ -1,10 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ThemeToggleComponent } from './theme-toggle.component';
 import { take } from 'rxjs';
 import { ThemeService } from 'src/app/modules/shared/services/theme/theme.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BrowserModule } from '@angular/platform-browser';
 import { CmsModule } from '../../cms.module';
+import { ThemeToggleComponent } from './theme-toggle.component';
 
 describe('ToggleComponent', () => {
   let component: ThemeToggleComponent;
