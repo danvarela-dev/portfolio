@@ -1,0 +1,51 @@
+@use 'sass:map';
+@import 'colors';
+
+.toggle {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: 48px;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: map.get($blue, 0);
+
+  &.dark {
+    background-color: map.get($white, 0);
+
+    .container {
+      color: map.get($blue, 0);
+      flex-direction: row-reverse;
+
+      .circle {
+        background-color: map.get($blue, 0);
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: map.get($white, 1);
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 14px;
+      font-weight: lighter;
+    }
+
+    .circle {
+      background-color: map.get($white, 1);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+  }
+}
