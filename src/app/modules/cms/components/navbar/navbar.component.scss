@@ -1,0 +1,202 @@
+@use 'sass:map';
+@import 'colors';
+@import 'mixins';
+
+$light-theme: (
+  top-navbar-bg: map.get($white, 0),
+  logo-str-color: map.get($purple, 0),
+  item-color: map.get($blue, 0),
+  item-hover: map.get($purple, 0),
+  item-active: map.get($purple, 1),
+  menu-icon-color: map.get($blue, 0),
+  drawer-bg: map.get($white, 0),
+);
+
+$dark-theme: (
+  top-navbar-bg: map.get($black, 0),
+  logo-str-color: map.get($purple, 1),
+  item-color: map.get($white, 2),
+  item-hover: map.get($purple, 1),
+  item-active: map.get($purple, 0),
+  menu-icon-color: map.get($white, 1),
+  drawer-bg: map.get($black, 0),
+);
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 124px;
+  box-sizing: border-box;
+  background-color: map.get($light-theme, top-navbar-bg);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  height: 80px;
+  width: 100%;
+
+  @include screen-large {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .ri-menu-fill {
+      font-size: 20px;
+      color: map.get($light-theme, menu-icon-color);
+    }
+
+    &.dark {
+      .ri-menu-fill {
+        color: map.get($dark-theme, menu-icon-color);
+      }
+    }
+  }
+
+  &.dark {
+    background-color: map.get($dark-theme, top-navbar-bg);
+
+    .logo .str {
+      color: map.get($dark-theme, logo-str-color);
+    }
+
+    .content .item {
+      color: map.get($dark-theme, item-color);
+
+      &:hover {
+        border-bottom: 2px solid map.get($dark-theme, item-hover);
+      }
+
+      &:active {
+        border-bottom: 2px solid map.get($dark-theme, item-active);
+      }
+    }
+  }
+
+  .logo .str {
+    display: flex;
+    align-items: center;
+    color: map.get($light-theme, logo-str-color);
+    font-size: 30px;
+    font-weight: 600;
+    user-select: none;
+
+    .slash {
+      font-size: 38px;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+    .item {
+      color: map.get($light-theme, item-color);
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: bold;
+      box-sizing: border-box;
+      padding: 8px;
+      border-bottom: 2px solid transparent;
+      user-select: none;
+
+      &:hover {
+        cursor: pointer;
+        border-bottom: 2px solid map.get($light-theme, item-hover);
+      }
+
+      &:active {
+        border-bottom: 2px solid map.get($light-theme, item-active);
+      }
+    }
+  }
+}
+
+.drawer-wrap {
+  position: absolute;
+  top: 0;
+  width: 60%;
+
+  .drawer {
+    height: 100vh;
+    background-color: map.get($light-theme, drawer-bg);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
+    &.dark {
+      background-color: map.get($dark-theme, drawer-bg);
+
+      .ri-arrow-left-s-line {
+        color: map.get($dark-theme, menu-icon-color);
+      }
+
+      .content .item {
+        color: map.get($dark-theme, item-color);
+
+        &:hover {
+          border-bottom: 2px solid map.get($dark-theme, item-hover);
+        }
+
+        &:active {
+          border-bottom: 2px solid map.get($dark-theme, item-active);
+        }
+      }
+
+      .logo .str {
+        color: map.get($dark-theme, logo-str-color);
+      }
+    }
+
+    .ri-arrow-left-s-line {
+      font-size: 30px;
+      color: map.get($light-theme, menu-icon-color);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      padding: 0px 16px;
+    }
+
+    .logo .str {
+      display: flex;
+      align-items: center;
+      color: map.get($light-theme, logo-str-color);
+      font-size: 30px;
+      font-weight: 600;
+      user-select: none;
+
+      .slash {
+        font-size: 38px;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      padding: 16px 24px;
+
+      .item {
+        width: 150px;
+        color: map.get($light-theme, item-color);
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: bold;
+        box-sizing: border-box;
+        padding: 8px;
+        border-bottom: 2px solid transparent;
+        user-select: none;
+
+        &:hover {
+          cursor: pointer;
+          border-bottom: 2px solid map.get($light-theme, item-hover);
+        }
+
+        &:active {
+          border-bottom: 2px solid map.get($light-theme, item-active);
+        }
+      }
+    }
+  }
+}

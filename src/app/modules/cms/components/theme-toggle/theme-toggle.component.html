@@ -1,0 +1,7 @@
+<div class="toggle" [ngClass]="{ dark: isDarkTheme$ | async }" (click)="toggle()">
+  <div class="container">
+    <div class="circle" [@slideAnimation]="animationState"></div>
+    <i *ngIf="(isDarkTheme$ | async) === true" class="ri-moon-line"></i>
+    <i *ngIf="(isDarkTheme$ | async) === false" class="ri-sun-line"></i>
+  </div>
+</div>

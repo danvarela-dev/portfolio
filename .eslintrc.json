@@ -64,7 +64,8 @@
         "prefer-arrow/prefer-arrow-functions": "off",
         "prefer-const": "error",
         "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
-        "semi": "error"
+        "semi": "error",
+        "no-negated-async": "off"
       }
     },
     {

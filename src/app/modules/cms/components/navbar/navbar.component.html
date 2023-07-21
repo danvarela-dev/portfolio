@@ -1,0 +1,48 @@
+<div class="top-navbar" [ngClass]="{ dark: isDarkTheme$ | async }">
+  <i class="ri-menu-fill" *ngIf="isMobile" (click)="toggleDrawer()"></i>
+
+  <div class="logo">
+    <div class="str">
+      <span><</span>
+      <span>DV</span>
+      <span class="slash">/</span>
+      <span>></span>
+    </div>
+  </div>
+
+  <app-theme-toggle *ngIf="isMobile"></app-theme-toggle>
+
+  <div class="content" *ngIf="!isMobile">
+    <span class="item" [routerLink]="">Home</span>
+    <span class="item" [routerLink]="">About Me</span>
+    <span class="item" [routerLink]="">Experience</span>
+    <span class="item" [routerLink]="">Projects</span>
+    <app-theme-toggle></app-theme-toggle>
+  </div>
+</div>
+
+<div class="drawer-wrap" [@slideAnimation]="drawerAnimationState">
+  <div *ngIf="isMobile && isDrawerOpen" class="drawer" [ngClass]="{ dark: isDarkTheme$ | async }">
+    <div class="header">
+      <i class="ri-arrow-left-s-line" (click)="toggleDrawer()"></i>
+
+      <div class="logo">
+        <div class="str">
+          <span><</span>
+          <span>DV</span>
+          <span class="slash">/</span>
+          <span>></span>
+        </div>
+      </div>
+
+      <div class="spacer"></div>
+    </div>
+
+    <div class="content">
+      <span class="item" [routerLink]="">Home</span>
+      <span class="item" [routerLink]="">About Me</span>
+      <span class="item" [routerLink]="">Experience</span>
+      <span class="item" [routerLink]="">Projects</span>
+    </div>
+  </div>
+</div>
