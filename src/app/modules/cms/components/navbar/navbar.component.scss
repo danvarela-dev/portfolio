@@ -22,7 +22,6 @@ $dark-theme: (
   drawer-bg: map.get($black, 0),
 );
 
-
 .top-navbar {
   display: flex;
   justify-content: space-between;
@@ -52,7 +51,6 @@ $dark-theme: (
     }
   }
 
-
   &.dark {
     background-color: map.get($dark-theme, top-navbar-bg);
 
@@ -73,8 +71,6 @@ $dark-theme: (
     }
   }
 
-
-
   .logo .str {
     display: flex;
     align-items: center;
@@ -92,8 +88,6 @@ $dark-theme: (
     display: flex;
     gap: 100px;
     align-items: center;
-
-
 
     .item {
       color: map.get($light-theme, item-color);
@@ -121,7 +115,6 @@ $dark-theme: (
   position: absolute;
   top: 0;
   width: 60%;
-
 
   .drawer {
     height: 100vh;
@@ -177,8 +170,6 @@ $dark-theme: (
         font-size: 38px;
       }
     }
-
-
 
     .content {
       display: flex;
