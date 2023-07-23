@@ -8,13 +8,13 @@ $light-theme: (
   font-color: map.get($blue, 0),
   mobile-font-color: map.get($white, 2),
   button-bg: map.get($purple, 0),
-  button-color: map.get($white, 2)
+  button-color: map.get($white, 2),
 );
 
 $dark-theme: (
   background: map.get($blue, 0),
   diagonal: map.get($purple, 0),
-  font-color: map.get($white, 2)
+  font-color: map.get($white, 2),
 );
 
 .home {
@@ -45,7 +45,6 @@ $dark-theme: (
     }
   }
 
-
   .content {
     display: flex;
     justify-content: space-between;
@@ -68,7 +67,6 @@ $dark-theme: (
       a {
         text-decoration: none;
       }
-
 
       .button {
         font-size: 30px;
@@ -102,7 +100,6 @@ $dark-theme: (
       }
     }
 
-
     .left {
       display: flex;
       flex-direction: column;
@@ -110,7 +107,6 @@ $dark-theme: (
       justify-content: flex-start;
 
       &-mobile {
-
         .intro,
         .title {
           color: map.get($light-theme, mobile-font-color);
@@ -213,8 +209,6 @@ $dark-theme: (
       }
     }
   }
-
-
 
   .diagonal {
     position: absolute;
