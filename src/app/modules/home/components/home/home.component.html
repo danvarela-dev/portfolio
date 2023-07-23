@@ -1,0 +1,47 @@
+<div class="home" [ngClass]="{ dark: isDarkTheme$ | async }">
+  <div class="diagonal"></div>
+  <div class="content">
+    <div class="left" [ngClass]="{ 'left-mobile': isMobile }">
+      <span class="intro">Hello, I am</span>
+      <div class="name-title">
+        <div class="name" [ngClass]="{ 'name-mobile': isMobile }">
+          <span class="first">Daniel</span>
+          <span class="last">Varela</span>
+        </div>
+        <span class="title" *ngIf="!isMobile">Software Developer</span>
+      </div>
+      <div class="button-group" *ngIf="!isMobile">
+        <a href="https://www.linkedin.com/in/daniel-varela-181476106/" target="_blank">
+          <div class="button">
+            <i class="ri-linkedin-box-fill"></i>
+            <span>Linkedin</span>
+          </div>
+        </a>
+        <a href="https://github.com/davaflo" target="_blank">
+          <div class="button">
+            <i class="ri-github-fill"></i>
+            <span>Github</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="right" [ngClass]="{ 'right-mobile': isMobile }">
+      <img src="assets/images/pic.jpg" />
+      <span class="title" *ngIf="isMobile">Software Developer</span>
+      <div class="button-group" *ngIf="isMobile">
+        <a href="https://www.linkedin.com/in/daniel-varela-181476106/" target="_blank">
+          <div class="button">
+            <i class="ri-linkedin-box-fill"></i>
+            <span>Linkedin</span>
+          </div>
+        </a>
+        <a href="https://github.com/davaflo" target="_blank">
+          <div class="button">
+            <i class="ri-github-fill"></i>
+            <span>Github</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
