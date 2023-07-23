@@ -22,16 +22,65 @@ $dark-theme: (
   drawer-bg: map.get($black, 0),
 );
 
+.logo .str {
+  display: flex;
+  align-items: center;
+  color: map.get($light-theme, logo-str-color);
+  font-size: 30px;
+  font-weight: 600;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+
+  @include screen-small {
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .slash {
+    font-size: 38px;
+    transition: all 0.3s ease-in-out;
+
+    @include screen-small {
+      font-size: 30px;
+    }
+  }
+}
+
 .top-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 124px;
+  padding: 16px 5%;
   box-sizing: border-box;
   background-color: map.get($light-theme, top-navbar-bg);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   height: 80px;
   width: 100%;
+  transition: all 0.3s ease-in-out;
+
+  .ri-menu-fill:hover {
+    cursor: pointer;
+  }
+
+  @include screen-small {
+    padding: 16px 64px;
+    height: 50px;
+
+    .logo .str {
+      margin-left: 16px;
+    }
+
+    i {
+      font: 20px;
+    }
+  }
+
+  @include screen-small {
+    .ri-menu-fill {
+      transition: all 0.3s ease-in-out;
+      font-size: 16px;
+    }
+  }
 
   @include screen-large {
     padding: 16px 24px;
@@ -70,43 +119,30 @@ $dark-theme: (
       }
     }
   }
+}
 
-  .logo .str {
-    display: flex;
-    align-items: center;
-    color: map.get($light-theme, logo-str-color);
-    font-size: 30px;
-    font-weight: 600;
+.content {
+  display: flex;
+  gap: 54px;
+  align-items: center;
+
+  .item {
+    color: map.get($light-theme, item-color);
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 8px;
+    border-bottom: 2px solid transparent;
     user-select: none;
 
-    .slash {
-      font-size: 38px;
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid map.get($light-theme, item-hover);
     }
-  }
 
-  .content {
-    display: flex;
-    gap: 100px;
-    align-items: center;
-
-    .item {
-      color: map.get($light-theme, item-color);
-      font-size: 16px;
-      line-height: 16px;
-      font-weight: bold;
-      box-sizing: border-box;
-      padding: 8px;
-      border-bottom: 2px solid transparent;
-      user-select: none;
-
-      &:hover {
-        cursor: pointer;
-        border-bottom: 2px solid map.get($light-theme, item-hover);
-      }
-
-      &:active {
-        border-bottom: 2px solid map.get($light-theme, item-active);
-      }
+    &:active {
+      border-bottom: 2px solid map.get($light-theme, item-active);
     }
   }
 }
@@ -146,7 +182,7 @@ $dark-theme: (
     }
 
     .ri-arrow-left-s-line {
-      font-size: 30px;
+      font-size: 28px;
       color: map.get($light-theme, menu-icon-color);
     }
 
@@ -154,48 +190,18 @@ $dark-theme: (
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 80px;
+      height: 65px;
       padding: 0px 16px;
     }
 
-    .logo .str {
-      display: flex;
-      align-items: center;
-      color: map.get($light-theme, logo-str-color);
-      font-size: 30px;
-      font-weight: 600;
-      user-select: none;
-
-      .slash {
-        font-size: 38px;
-      }
-    }
-
     .content {
-      display: flex;
       flex-direction: column;
       gap: 28px;
+      align-items: flex-start;
       padding: 16px 24px;
 
       .item {
         width: 150px;
-        color: map.get($light-theme, item-color);
-        font-size: 16px;
-        line-height: 16px;
-        font-weight: bold;
-        box-sizing: border-box;
-        padding: 8px;
-        border-bottom: 2px solid transparent;
-        user-select: none;
-
-        &:hover {
-          cursor: pointer;
-          border-bottom: 2px solid map.get($light-theme, item-hover);
-        }
-
-        &:active {
-          border-bottom: 2px solid map.get($light-theme, item-active);
-        }
       }
     }
   }
