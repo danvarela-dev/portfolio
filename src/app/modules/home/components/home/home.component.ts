@@ -15,13 +15,13 @@ export class HomeComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
-    this.isMobile = this.screenWidth < 1024;
+    this.isMobile = this.screenWidth <= 1024;
   }
 
   constructor(private themeService: ThemeService) {}
 
   ngOnInit(): void {
     this.isDarkTheme$ = this.themeService.theme;
-    this.isMobile = this.screenWidth < 1024;
+    this.isMobile = this.screenWidth <= 1024;
   }
 }
