@@ -25,5 +25,6 @@ export class AboutMeComponent implements OnInit {
 
   ngOnInit(): void {
     this.isDarkTheme$ = this.themeService.theme;
+    this.isMobile = this.screenWidth < 1024;
   }
 }
