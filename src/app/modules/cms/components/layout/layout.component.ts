@@ -12,10 +12,10 @@ export class LayoutComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.screenWidth = window.innerWidth;
-    this.isMobile = this.screenWidth < 1024;
+    this.isMobile = this.screenWidth <= 1024;
   }
 
   ngOnInit(): void {
-    this.isMobile = this.screenWidth < 1024;
+    this.isMobile = this.screenWidth <= 1024;
   }
 }

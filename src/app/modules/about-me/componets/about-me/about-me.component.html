@@ -1,0 +1,40 @@
+<div class="about-me-wrapper" [ngClass]="{ dark: isDarkTheme$ | async }">
+  <div class="about-me">
+    <div class="illustration" *ngIf="!isMobile">
+      <img src="assets/images/developer_male_icons.png" />
+    </div>
+    <div class="content">
+      <div class="header"><span>About me</span></div>
+      <div class="location">
+        <div class="icon">
+          <i class="ri-map-pin-2-fill"></i>
+        </div>
+        <span>San Pedro Sula, Honduras</span>
+      </div>
+      <div class="body">
+        <p>
+          Skilled software developer with a primary focus on front-end technologies such as Angular
+          and proficient in .NET. Additionally, I am expanding my knowledge by actively learning
+          React, NodeJS, and Nest JS to enhance my capabilities as a multi-stack developer.
+        </p>
+      </div>
+      <div class="illustration" *ngIf="isMobile">
+        <img src="assets/images/developer_male_icons.png" />
+      </div>
+      <div class="footer">
+        <a [href]="resumeUrl" target="_blank">
+          <div class="button">
+            <i class="ri-download-2-line"></i>
+            <span>Resume</span>
+          </div>
+        </a>
+        <a [href]="emailStr" target="_blank">
+          <div class="button">
+            <i class="ri-mail-fill"></i>
+            <span>Email</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

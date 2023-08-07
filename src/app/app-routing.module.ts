@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './modules/cms/components/layout/layout.component';
 import { CmsModule } from './modules/cms/cms.module';
-import { HomeComponent } from './modules/home/components/home/home.component';
 
 const routes: Routes = [
   {
@@ -12,6 +11,11 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./modules/home/home.module').then((m) => m.HomeModule),
+      },
+      {
+        path: 'about-me',
+        loadChildren: () =>
+          import('./modules/about-me/about-me.module').then((m) => m.AboutMeModule),
       },
       {
         path: '**',
