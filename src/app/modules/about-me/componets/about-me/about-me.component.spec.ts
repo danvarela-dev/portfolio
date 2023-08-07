@@ -1,21 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { AboutMeComponent } from './about-me.component';
 import { ThemeService } from 'src/app/modules/shared/services/theme/theme.service';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('AboutMeComponent', () => {
+  let component: AboutMeComponent;
+  let fixture: ComponentFixture<AboutMeComponent>;
   let service: ThemeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent],
+      declarations: [AboutMeComponent],
       providers: [ThemeService],
     });
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(AboutMeComponent);
     component = fixture.componentInstance;
     service = TestBed.inject(ThemeService);
+
     fixture.detectChanges();
   });
 
@@ -29,7 +30,7 @@ describe('HomeComponent', () => {
 
     fixture.detectChanges();
 
-    const home = fixture.nativeElement.querySelector('.home');
+    const home = fixture.nativeElement.querySelector('.about-me-wrapper');
 
     expect(component.isDarkTheme$).toBeTruthy();
     expect(home.classList.contains('dark')).toBeTruthy();

@@ -1,41 +1,21 @@
-@font-face {
-  font-family: 'Roboto Condensed';
-  src: url('/assets/fonts/RobotoCondensed-Regular.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
+$font-family: 'Montserrat';
+$font-path: '/assets/fonts/';
+
+@mixin font-face($weight, $font-type) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$font-path}Montserrat-#{font-type}.ttf') format('ttf');
+    font-style: normal;
+    font-weight: $weight;
+  }
 }
 
-@font-face {
-  font-family: 'Roboto Condensed';
-  src: url('/assets/fonts/RobotoCondensed-Bold.ttf') format('ttf');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto Condensed';
-  src: url('/assets/fonts/RobotoCondensed-BoldItalic.ttf') format('ttf');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Roboto Condensed';
-  src: url('/assets/fonts/RobotoCondensed-Light.ttf') format('ttf');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Roboto Condensed';
-  src: url('/assets/fonts/RobotoCondensed-LightItalic.ttf') format('ttf');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Roboto Condensed';
-  src: url('/assets/fonts/RobotoCondensed-Italic.ttf') format('ttf');
-  font-weight: normal;
-  font-style: italic;
-}
+@include font-face(100, 'Thin');
+@include font-face(200, 'ExtraLight');
+@include font-face(300, 'Light');
+@include font-face(400, 'Regular');
+@include font-face(500, 'Medium');
+@include font-face(600, 'SemiBold');
+@include font-face(700, 'Bold');
+@include font-face(800, 'ExtraBold');
+@include font-face(900, 'Black');
