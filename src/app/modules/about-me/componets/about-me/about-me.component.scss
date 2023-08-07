@@ -37,6 +37,7 @@ $dark-theme: (
 
     .about-me {
       .content {
+
         .header span,
         .location span,
         .body p {
@@ -77,7 +78,8 @@ $dark-theme: (
         align-items: center;
         margin-top: 48px;
       }
-      ~ @include screen-small {
+
+      @include screen-small {
         margin-top: 0;
       }
 
