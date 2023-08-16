@@ -108,7 +108,6 @@ $dark-theme: (
       justify-content: flex-start;
 
       &-mobile {
-
         .intro,
         .title {
           color: map.get($light-theme, mobile-font-color);
