@@ -40,6 +40,7 @@ $dark-theme: (
   @include screen-small {
     height: 100%;
     padding: 16px 0;
+    top: 50px;
   }
 
   &.dark {
