@@ -22,6 +22,7 @@ $dark-theme: (
   z-index: -1;
   width: 100vw;
   height: calc(100vh - 80px);
+  top: 80px;
 
   @include screen-small {
     height: calc(100vh - 50px);
@@ -107,6 +108,7 @@ $dark-theme: (
       justify-content: flex-start;
 
       &-mobile {
+
         .intro,
         .title {
           color: map.get($light-theme, mobile-font-color);
