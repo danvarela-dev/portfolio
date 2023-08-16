@@ -1,4 +1,25 @@
+@use 'sass:map';
+@import 'colors.scss';
+
 body {
   margin: 0;
+}
+
+* {
   font-family: 'Montserrat', sans-serif;
+  scrollbar-color: map.get($purple, 1);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: map.get($purple, 1);
+    border-radius: 20px;
+  }
 }

@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
-import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 
 @NgModule({
   declarations: [LayoutComponent, NavbarComponent, ThemeToggleComponent],
